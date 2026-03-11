@@ -54,7 +54,7 @@ db_url = URL.create(
 )
 engine = create_engine(db_url)
 try:
-    df_clean.to_sql("city_weather", con=engine, if_exists='append', index=True)
+    df_clean.to_sql("city_weather", con=engine, if_exists='append', index=False)
     print("Loaded data to Postgres successfully")
 except Exception as e:
     print("Error when loading to postgres:", e)
