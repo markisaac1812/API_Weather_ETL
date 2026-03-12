@@ -7,7 +7,7 @@ from sqlalchemy.engine import URL
 import time
 
 # load env variables
-load_dotenv("e.env", override=True)
+load_dotenv(".env", override=True)
 
 url = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}"
 api_key = os.getenv("API_KEY")
